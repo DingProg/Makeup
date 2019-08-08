@@ -52,7 +52,7 @@ public class DrawUtils {
             for (Region region : list) {
                switch (region){
                    case FOUNDATION:
-                       FoundationDraw.draw(canvas,FacePoint.landmark(faceJson), Color.WHITE,100);
+                       FoundationDraw.draw(canvas,FacePoint.landmark(faceJson), Color.WHITE,80);
                        break;
                    case BLUSH:
                        Bitmap blush = BitmapUtils.getBitmapByAssetsName(context,"face_blush.png");
