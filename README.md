@@ -108,8 +108,11 @@ canvas.drawBitmap(bitmap,right,right,null);
         "left_eye_46": {
           "y": 170,
           "x": 137
-        },
- ·········
+        }
+       }
+     }
+   }
+}
 ```
 如果商用建议购买其SDK。
 有了这些点，我们就可以接下来“画”妆了。
