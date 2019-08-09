@@ -56,7 +56,7 @@ public class DrawUtils {
                        break;
                    case BLUSH:
                        Bitmap blush = BitmapUtils.getBitmapByAssetsName(context,"face_blush.png");
-                       BlushDraw.drawBlush(canvas,blush,FacePoint.getBlush(faceJson),60);
+                       BlushDraw.drawBlush(canvas,blush,FacePoint.getBlush(faceJson),100);
                        break;
                    case BROW:
                        Bitmap eyeBrow = BitmapUtils.getBitmapByAssetsName(context,"brow.png");
@@ -64,7 +64,7 @@ public class DrawUtils {
                        break;
                    case LIP:
                        Path mouthPath = FacePoint.getMouthPath(faceJson);
-                       LipDraw.drawLipPerfect(canvas,mouthPath, Color.RED,150);
+                       LipDraw.drawLipPerfect(canvas,mouthPath, Color.RED,120);
                        break;
                    case EYE_LASH:
                        EyeAngleAndScaleCalc.Bean bean = new EyeAngleAndScaleCalc.Bean();
@@ -80,7 +80,7 @@ public class DrawUtils {
                        EyeDraw.drawLash(context,canvas,bean,FacePoint.getLeftEyePoint(faceJson),80,false);
                        break;
                    case EYE_CONTACT:
-                       Bitmap contact = BitmapUtils.getBitmapByAssetsName(context,"eye_contact.png");
+                       Bitmap contact = BitmapUtils.getBitmapByAssetsName(context,"eye.png");
                        EyeDraw.drawContact(canvas,contact,FacePoint.getLeftEyePath(faceJson),
                                FacePoint.getLeftEyeCenter(faceJson),FacePoint.getLeftEyeRadius(faceJson),120);
 
