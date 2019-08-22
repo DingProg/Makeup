@@ -41,9 +41,10 @@ public class MakeupBeautyUtils {
                 canvas.drawBitmap(bitmap,right,right,null);
 
                 obtain.obj = leftAndRightBitmap;
+                obtain.what = 0;
                 handler.sendMessage(obtain);
             }
-        }).start();;
+        }).start();
     }
 
     public void destroy(){

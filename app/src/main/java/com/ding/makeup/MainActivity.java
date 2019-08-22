@@ -8,9 +8,13 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ding.makeup.beauty.MagnifyEyeUtils;
 import com.ding.makeup.utils.BitmapUtils;
 import com.ding.makeup.utils.DrawUtils;
+import com.ding.makeup.utils.FacePoint;
 import com.ding.makeup.utils.MakeupBeautyUtils;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +24,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean handleMessage(Message msg) {
             if(msg.obj instanceof Bitmap){
-                drawMakeup((Bitmap) msg.obj);
+                if(msg.what == 0) {
+                    drawMakeup((Bitmap) msg.obj);
+                    magnifyEye((Bitmap) msg.obj);
+                }else if(msg.what == 1){
+                    imageView.setImageBitmap((Bitmap) msg.obj);
+                }
             }
             return false;
         }
@@ -51,6 +60,22 @@ public class MainActivity extends AppCompatActivity {
         drawUtils.init();
         drawUtils.draw(this,drawUtils.getMakeupList(),bitmap,"face_point1.json");
         imageView.setImageBitmap(bitmap);
+    }
+
+    private void magnifyEye(final Bitmap bitmap){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String faceJson = FacePoint.getFaceJson(MainActivity.this,"face_point1.json");
+                Bitmap magnifyEye = MagnifyEyeUtils.magnifyEye(bitmap, Objects.requireNonNull(FacePoint.getLeftEyeCenter(faceJson)), FacePoint.getLeftEyeRadius(faceJson) * 3, 3);
+
+                Message msg = Message.obtain();
+                msg.what = 1;
+                msg.obj = magnifyEye;
+                handler.sendMessage(msg);
+
+            }
+        }).start();
     }
 
     @Override
