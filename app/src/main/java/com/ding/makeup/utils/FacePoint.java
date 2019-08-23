@@ -97,6 +97,18 @@ public class FacePoint {
         return null;
     }
 
+    public static Point getRightEyeCenter(String faceJson){
+        try {
+            JSONObject jsonObject = new JSONObject(faceJson);
+            JSONObject eye = jsonObject.getJSONObject("face").getJSONObject("landmark").getJSONObject("right_eye");
+
+            return getPointByJson(eye.getJSONObject("right_eye_pupil_center"));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 
     public static Path getLeftEyePath(String faceJson){
         try {
@@ -184,6 +196,55 @@ public class FacePoint {
         }
         return null;
 
+    }
+
+
+    public static List<Point> getLeftFacePoint(String faceJson){
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = new JSONObject(faceJson);
+            JSONObject face = jsonObject.getJSONObject("face").getJSONObject("landmark").getJSONObject("face");
+            List<Point> list = new ArrayList<>();
+            for(int i= 0;i< 64;i++){
+                Point point = getPointByJson(face.getJSONObject("face_contour_left_"+i));
+                list.add(point);
+            }
+            return list;
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static List<Point> getRightFacePoint(String faceJson){
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = new JSONObject(faceJson);
+            JSONObject face = jsonObject.getJSONObject("face").getJSONObject("landmark").getJSONObject("face");
+            List<Point> list = new ArrayList<>();
+            for(int i= 0;i< 64;i++){
+                Point point = getPointByJson(face.getJSONObject("face_contour_right_"+i));
+                list.add(point);
+            }
+
+            return list;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static Point getCenterPoint(String faceJson){
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = new JSONObject(faceJson);
+            JSONObject center = jsonObject.getJSONObject("face").getJSONObject("landmark").getJSONObject("nose");
+            return getPointByJson(center.getJSONObject("nose_midline_30"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static Path getBlush(String faceJson){

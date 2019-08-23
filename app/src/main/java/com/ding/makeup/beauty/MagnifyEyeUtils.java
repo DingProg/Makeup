@@ -3,6 +3,8 @@ package com.ding.makeup.beauty;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 
+import com.ding.makeup.utils.TimeAopUtils;
+
 /**
  * @author by dingdegao
  *         time 2017/9/29 16:03
@@ -19,6 +21,7 @@ public class MagnifyEyeUtils {
      * @return 放大眼睛后的图片
      */
     public static Bitmap magnifyEye(Bitmap bitmap, Point centerPoint, int radius, float sizeLevel) {
+        TimeAopUtils.start();
         Bitmap dstBitmap = bitmap.copy(Bitmap.Config.RGB_565, true);
         int left = centerPoint.x - radius < 0 ? 0 : centerPoint.x - radius;
         int top = centerPoint.y - radius < 0 ? 0 : centerPoint.y - radius;
@@ -61,6 +64,7 @@ public class MagnifyEyeUtils {
                 }
             }
         }
+        TimeAopUtils.end("eye","magnifyEye");
         return dstBitmap;
     }
 

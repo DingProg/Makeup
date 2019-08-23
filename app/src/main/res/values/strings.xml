@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Makeup</string>
+    <string name="magnify">进入大眼效果预览</string>
+    <string name="smallFace">进入瘦脸操作及预览</string>
+    <string name="longLeg">进入大长腿预览</string>
+    <string name="compare">对比</string>
 </resources>

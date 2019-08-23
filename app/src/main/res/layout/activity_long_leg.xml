@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/showPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/imgResult"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+   <FrameLayout
+       android:id="@+id/showOperate"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <com.ding.makeup.beauty.SmallFaceView
+           android:id="@+id/smallFaceView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+
+       <com.ding.makeup.beauty.AdjustLegView
+           android:id="@+id/longLegView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+
+   </FrameLayout>
+
+    <Button
+        android:id="@+id/compare"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:text="@string/compare"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_btn"
+        android:layout_gravity="right"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        tools:ignore="RtlHardcoded" />
+
+
+</FrameLayout>

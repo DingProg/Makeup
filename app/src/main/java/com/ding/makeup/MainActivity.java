@@ -1,15 +1,19 @@
 package com.ding.makeup;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ding.makeup.beauty.AdjustLegView;
 import com.ding.makeup.beauty.MagnifyEyeUtils;
 import com.ding.makeup.utils.BitmapUtils;
+import com.ding.makeup.utils.CommonShareBitmap;
 import com.ding.makeup.utils.DrawUtils;
 import com.ding.makeup.utils.FacePoint;
 import com.ding.makeup.utils.MakeupBeautyUtils;
@@ -49,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private void load() {
         try {
             Bitmap bitmap = BitmapUtils.getBitmapByAssetsName(this,"makeup1.jpeg");
+            CommonShareBitmap.originBitmap = bitmap;
             makeupBeautyUtils.progress(bitmap,handler);
         } catch (Exception e) {
             e.printStackTrace();
@@ -82,5 +87,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         makeupBeautyUtils.destroy();
+        if(CommonShareBitmap.originBitmap != null && !CommonShareBitmap.originBitmap.isRecycled()){
+            CommonShareBitmap.originBitmap.recycle();
+            CommonShareBitmap.originBitmap = null;
+        }
+    }
+
+    public void enterEyeMagnify(View view) {
+        startActivity(new Intent(this,MagnifyActivity.class));
+    }
+
+    public void enterSmallFace(View view) {
+        startActivity(new Intent(this,SmallFaceActivity.class));
+    }
+
+    public void enterLongLeg(View view) {
+        startActivity(new Intent(this, AdjustLegActivity.class));
     }
 }
