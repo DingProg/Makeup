@@ -4,7 +4,8 @@
 
 # 部分效果展示
 美妆  
-![](https://github.com/DingProg/Makeup/blob/master/doc/3.png)   
+![](https://github.com/DingProg/Makeup/blob/master/doc/3.png)
+![](https://github.com/DingProg/Makeup/blob/master/doc/5.png)      
 大眼  
 ![](https://github.com/DingProg/Makeup/blob/master/doc/1.png)  
 瘦脸  
@@ -12,8 +13,8 @@
 大长腿  
 ![](https://github.com/DingProg/Makeup/blob/master/doc/4.png)   
 
-![](https://github.com/DingProg/Makeup/blob/master/doc/makeup1.png)
-![](https://github.com/DingProg/Makeup/blob/master/doc/makeupgif.gif)
+
+![](https://github.com/DingProg/Makeup/blob/master/doc/smallface.gif)
 
 更多效果，直接查看APP，或者下面描述的原理文章，有更多效果展示.
 

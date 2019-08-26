@@ -10,7 +10,6 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ding.makeup.beauty.AdjustLegView;
 import com.ding.makeup.beauty.MagnifyEyeUtils;
 import com.ding.makeup.utils.BitmapUtils;
 import com.ding.makeup.utils.CommonShareBitmap;
