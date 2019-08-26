@@ -12,7 +12,6 @@ import android.graphics.Rect;
 
 public class LongLegsUtils {
 
-    public static final int MIN_HEIGHT = 10;
     /**
      * 大长腿算法
      *
