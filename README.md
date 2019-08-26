@@ -3,10 +3,13 @@
 本项目是一个使Android Project，用Canvas给人脸化妆(画妆)的APP 演示项目
 
 # 部分效果展示
-
+美妆
 ![](https://github.com/DingProg/Makeup/blob/master/doc/3.png)
+大眼
 ![](https://github.com/DingProg/Makeup/blob/master/doc/1.png)
+瘦脸
 ![](https://github.com/DingProg/Makeup/blob/master/doc/2.png)
+大长腿
 ![](https://github.com/DingProg/Makeup/blob/master/doc/4.png)  
 
 ![](https://github.com/DingProg/Makeup/blob/master/doc/makeup1.png)
