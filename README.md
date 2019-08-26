@@ -65,5 +65,5 @@ public enum BeautyType {
 
 # 原理实现部分
 
-[Android：让你的“女神”逆袭，代码撸彩妆（画妆)]()  
-[Android：让你的“女神”逆袭，代码撸彩妆 2（大眼，瘦脸，大长腿）]()
+[Android：让你的“女神”逆袭，代码撸彩妆（画妆)](https://github.com/DingProg/Makeup/blob/master/doc/doc1.md)  
+[Android：让你的“女神”逆袭，代码撸彩妆 2（大眼，瘦脸，大长腿）](https://github.com/DingProg/Makeup/blob/master/doc/doc2.md)
