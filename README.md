@@ -1,6 +1,6 @@
 # 项目介绍  
 
-本项目是一个使Android Project，用Canvas给人脸化妆(画妆)的APP 演示项目
+本项目是一个Android Project，用Canvas给人脸化妆(画妆)的APP演示项目
 
 # 部分效果展示
 美妆  
@@ -16,9 +16,9 @@
 
 ![](https://github.com/DingProg/Makeup/blob/master/doc/smallface.gif)
 
-更多效果，直接查看APP，或者下面描述的原理文章，有更多效果展示.
+更多演示效果请直接查看下方原理文章，或者clone代码到你本地，直接运行APP.
 
-## 主要内容包括
+# 演示APP主要内容包括
 
 ```java
 public enum Region {
