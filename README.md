@@ -1,6 +1,11 @@
 # 项目介绍  
 
-本项目是一个Android Project，用Canvas给人脸化妆(画妆)的APP演示项目
+本项目是一个Android Project，用Canvas给人脸化妆(画妆)的APP演示项目  
+
+主要内容包括：
+- 唇彩，美瞳，粉底，眼影，腮红，眼线，双眼皮，眉毛等，能画的妆，都画了
+- 利用图形局部变形算法进行 大眼，瘦脸，丰胸，大长腿等
+- 磨平/美白
 
 # 部分效果展示
 美妆  
@@ -16,10 +21,9 @@
 
 ![](https://github.com/DingProg/Makeup/blob/master/doc/smallface.gif)
 
-更多演示效果请直接查看下方原理文章，或者clone代码到你本地，直接运行APP.
+更多演示效果请直接查看下方原理文章，或者直接下载 [演示APP Release V1.0.0版本](https://github.com/DingProg/Makeup/releases)
 
-# 演示APP主要内容包括
-
+# 演示APP 主要实现了的部分为
 ```java
 public enum Region {
 
@@ -42,13 +46,11 @@ public enum Region {
 
 public enum BeautyType {
 
-    INPAINT(1,"祛斑"),
     SMALLFACE(2,"瘦脸"),
     LONGLEG(3,"大长腿增高"),
     EYE(4,"眼睛放大"),
     BREST(5,"丰胸"),
     WHITE(7,"美白"),
-    MAKEUP(8,"美妆"),
     SMALLBODY(9,"瘦脸瘦身");
 
     private int type;
@@ -58,18 +60,10 @@ public enum BeautyType {
         this.type = type;
         this.name = name;
     }
-
-    public int getType() {
-        return type;
-    }
-
-    public String getName() {
-        return name;
-    }
 }
 ```
 
-# 原理实现部分
+# 原理
 
 [Android：让你的“女神”逆袭，代码撸彩妆（画妆)](https://github.com/DingProg/Makeup/blob/master/doc/doc1.md)  
 [Android：让你的“女神”逆袭，代码撸彩妆 2（大眼，瘦脸，大长腿）](https://github.com/DingProg/Makeup/blob/master/doc/doc2.md)
