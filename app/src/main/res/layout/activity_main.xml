@@ -27,6 +27,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_margin="10dp"
+                android:text="@string/openCv"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_btn"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textAllCaps="false"
+                android:onClick="openCv"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
                 android:text="@string/magnify"
                 android:textSize="12sp"
                 android:textColor="@color/white"

@@ -26,4 +26,17 @@ public class BitmapUtils {
         }
         return null;
     }
+
+    public static Bitmap getBitmapByAssetsNameRGB(Context context, String name){
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inPreferredConfig = Bitmap.Config.RGB_565;
+        options.inMutable = true;
+
+        try {
+            return BitmapFactory.decodeStream(context.getAssets().open(name),new Rect(),options);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -4,4 +4,9 @@
     <string name="smallFace">进入瘦脸操作及预览</string>
     <string name="longLeg">进入大长腿预览</string>
     <string name="compare">对比</string>
+    <string name="openCv">openCv</string>
+    <string name="gray">灰度</string>
+    <string name="back">返回</string>
+    <string name="changeColor">换证件照背景</string>
+    <string name="inpaint">污点修复</string>
 </resources>

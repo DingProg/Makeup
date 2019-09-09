@@ -16,6 +16,7 @@ import com.ding.makeup.utils.CommonShareBitmap;
 import com.ding.makeup.utils.DrawUtils;
 import com.ding.makeup.utils.FacePoint;
 import com.ding.makeup.utils.MakeupBeautyUtils;
+import com.ding.opencv.PhotoChangeColorActivity;
 
 import java.util.Objects;
 
@@ -102,5 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void enterLongLeg(View view) {
         startActivity(new Intent(this, AdjustLegActivity.class));
+    }
+
+    public void openCv(View view) {
+        startActivity(new Intent(this, PhotoChangeColorActivity.class));
     }
 }

@@ -24,6 +24,9 @@
         <activity android:name=".AdjustLegActivity"/>
         <activity android:name=".MagnifyActivity"/>
 
+        <activity android:name="com.ding.opencv.PhotoChangeColorActivity"/>
+
+
     </application>
 
 </manifest>
