@@ -223,17 +223,21 @@ public class PhotoChangeColorActivity extends AppCompatActivity {
         bitmap = BitmapUtils.getBitmapByAssetsNameRGB(this,"test.png");
         Mat desc = new Mat(bitmap.getHeight(),bitmap.getWidth(),CvType.CV_8UC3);
 
+        //转化为mat对象
         Utils.bitmapToMat(bitmap, desc,true);
 
+        //转化为3通道图像
         Mat src = new Mat();
         Imgproc.cvtColor(desc,src,Imgproc.COLOR_RGBA2RGB);
 
-
+        //灰度图像
         Mat srcGray = new Mat();
         Imgproc.cvtColor(src, srcGray, Imgproc.COLOR_RGB2GRAY);
 
+        //中值滤波去燥
         Imgproc.medianBlur(srcGray,srcGray,3);
 
+        //获取污点的二值化图像
         Mat srcThresh = new Mat();
         Imgproc.threshold(srcGray,srcThresh,242,255,Imgproc.THRESH_BINARY);
 
@@ -243,10 +247,11 @@ public class PhotoChangeColorActivity extends AppCompatActivity {
 //        Bitmap resultBitmap = getResultBitmap();
 //        Utils.matToBitmap(srcThresh, resultBitmap);
 
-
+        //修复图像
         Mat inpaintResult = new Mat();
         Photo.inpaint(src,srcThresh,inpaintResult,3,Photo.INPAINT_TELEA);
 
+        //把结果转化为bitmap 用于显示
         Bitmap resultBitmap = getResultBitmap();
         Utils.matToBitmap(inpaintResult, resultBitmap);
 
