@@ -21,7 +21,10 @@
 
 ![](https://github.com/DingProg/Makeup/blob/master/doc/smallface.gif)
 
-更多演示效果请直接查看下方原理文章，或者直接下载 [演示APP Release V1.0.0版本](https://github.com/DingProg/Makeup/releases)
+更多演示效果请直接查看下方原理文章，或者直接下载 [演示APP Release V1.0.0版本](https://github.com/DingProg/Makeup/releases)   
+
+如果你要看换OpenCV相关的(换证件照背景/污点修复)，可以切换到分支[with-photo-changecolor](https://github.com/DingProg/Makeup/tree/with-photo-changecolor)   
+相关的演示APP为 [带替换证件照背景/污点修复版本](https://github.com/DingProg/Makeup/releases)
 
 # 演示APP 主要实现了的部分为
 ```java
