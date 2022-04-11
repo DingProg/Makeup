@@ -72,4 +72,4 @@ public enum BeautyType {
 [Android：让你的“女神”逆袭，代码撸彩妆 2（大眼，瘦脸，大长腿）](https://github.com/DingProg/Makeup/blob/master/doc/doc2.md)
 
 # 声明  
-本项目是演示性及学习性项目，项目中所用素材对于直接拿去商用所造成的侵权，概不负责.
+本项目是演示性及学习性项目，项目中所用素材对于直接拿去商用所造成的侵权，概不负责.  如果有侵权，请联系删除
